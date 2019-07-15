@@ -12,6 +12,8 @@ def knapsack():
     weight = [5, 4, 6, 3]
 
     # matrix for memoization initialized with 0's
+    # each row represents up to that item specifically (i.e. row 2 represents consideration from both item 1 and 2)
+    # each column represents the total weight units in consideration with the respective items considered
     memo = [[0 for x in range(totalWeight + 1)] for x in range(n + 1)]
     
     # Run on every cell in the matrix except for the base cases
