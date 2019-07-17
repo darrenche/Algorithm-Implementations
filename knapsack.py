@@ -1,9 +1,13 @@
 '''
-0-1 Knapsack Implementation using Dynamic Programming
+0-1 Knapsack Problem Implementation using Dynamic Programming (Bottom-Up approach)
 
 Problem:
 Given weight and value of certain items with 1 quantity each and maximum weight allowed in the knapsack, 
 how do we pick items such that both the sum of weight of items picked is less than or equal to maximum allowed weight and value of such items is maximized
+
+
+Time complexity:
+Space complexity:
 
 '''
 
@@ -49,9 +53,13 @@ def knapsack():
             # in other words, pick either the maximum value that we can obtain without current item, or the maximum value that we can obtain along with current item
             memo[item][capacity] = max(maxWithCurrent, maxWithoutCurrent)
 
-    print(f"With {n} total items and a knapsack that can carry a maximum of {totalWeight} units, the maximum value possible is {memo[n][totalWeight]}.")
     
     # visual representation of the memoization matrix
-    print(memo)
+    # print(memo)
+
+    print(f"With {n} total items and a knapsack that can carry a maximum of {totalWeight} units, the maximum value possible is {memo[n][totalWeight]}.")
+
+    # return the requested maximum possible value
+    return memo[n][totalWeight]
 
 knapsack()
