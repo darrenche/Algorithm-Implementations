@@ -1,4 +1,12 @@
-# 0-1 Knapsack Implementation using Dynamic Programming
+'''
+0-1 Knapsack Implementation using Dynamic Programming
+
+Problem:
+Given weight and value of certain items with 1 quantity each and maximum weight allowed in the knapsack, 
+how do we pick items such that both the sum of weight of items picked is less than or equal to maximum allowed weight and value of such items is maximized
+
+'''
+
 def knapsack():
     '''
     totalWeight: represents the weight units that the knapsack can hold at maximum capacity
